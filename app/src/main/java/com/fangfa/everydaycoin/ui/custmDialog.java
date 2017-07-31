@@ -14,6 +14,7 @@ import com.fangfa.everydaycoin.vov.BaseActivty;
 
 /**
  * Created by Administrator on 2017/7/25 0025.
+ *
  */
 
 public class custmDialog  extends Activity implements View.OnClickListener{

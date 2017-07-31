@@ -52,7 +52,7 @@ import org.json.JSONObject;
 import java.net.URL;
 import java.util.List;
 
-
+//查看
 //md5:668bcc72a4ce7dcfad8f2f4066cba8ee
 @SuppressLint({"SetJavaScriptEnabled", "AddJavascriptInterface"})
 public class MainActivity extends BaseActivty {
