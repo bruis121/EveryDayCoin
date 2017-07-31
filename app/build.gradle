@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "com.fangfa.everydaycoin"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 3
+        versionName "1.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {abiFilters "armeabi", "armeabi-v7a", "x86", "mips" }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {//使用JAVA8语法解析
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    retrolambda {//指定将源码编译的级别，使用下列代码，会将代码编译到兼容1.6的字节码格式
+        javaVersion JavaVersion.VERSION_1_6
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'pub.devrel:easypermissions:0.1.9'
+    compile 'com.wang.avi:library:1.0.0'
+    compile'com.nineoldandroids:library:2.4.0'
+    compile 'com.jaeger.statusbaruitl:library:1.0.0'
+    compile 'com.flyco.dialog:FlycoDialog_Lib:1.2.2@aar'
+    compile 'com.flyco.animation:FlycoAnimation_Lib:1.0.0@aar'
+    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0定
+
+    compile 'com.alibaba:fastjson:1.2.35'
+
+
+    compile 'com.balysv:material-ripple:1.0.2'
+
+}

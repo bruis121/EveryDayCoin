@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">币读</string>
+    <string name="title">温馨提示</string>
+    <string name="sure">确定</string>
+    <string name="exit">再按一次退出程序</string>
+    <string name="share_title">分享</string>
+    <string name="share_wei">发送到微信</string>
+    <string name="share_weimoments">发送到朋友圈</string>
+    <string name="share_qq">发送给好友</string>
+    <string name="share_qzone">发送到空间</string>
+    <string name="share_sinaweibo">发送到微博</string>
+</resources>
